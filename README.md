@@ -28,8 +28,8 @@ Most modern web applications end up being developed twice - one application to r
 Both are substantial programs with overlapping functionality, and they need even more code to communicate with each other.
 
 ###Running the back-end
-Apart from the effort to develop and deploy server applications, they are expensive to run, 
-especially if they need a database to go with them
+Apart from the effort to develop, optimise and deploy server applications, they are expensive to run, 
+especially if they need a database to go with them.
 
 ###Framework-itis
 Developers seem to love frameworks that take over the overall structure of the application,
@@ -48,7 +48,8 @@ Few applications support this well at the moment.
 Modern PCs have far more memory and CPU speed than most people need.  Even phones can have 1Gb of RAM and fast processors.  
 The client device in a web application often has more memory and CPU available than the virtual machine running the back end application.
 So we can move away from the idea of a powerful server feeding titbits to an underpowered browser, and regard
-the user's device as the main place where the application runs, maybe with support from a back end.
+the user's device as the main place where the application runs, maybe with support from a server.  Instead of using complex techniques to
+squeeze more performance out of expensive servers, just move the processing to the user's computer!
 
 ###Ample memory and bandwidth
 Computers have gigabytes of memory available, but in many applications all the data will fit into 100Mb or so.
@@ -63,7 +64,7 @@ they can work offline, and synchronise with a central store
 when the internet is available again.
 
 ###Universal programming language
-With JavaScript 2015 standard on browsers and servers with Node.js, it is now possible to write software
+With JavaScript ES2015 standard on browsers and servers with Node.js, it is now possible to write software
 in a powerful language that can be run on both servers and user devices.  There is no need to have separate front end
 and back end - just one application running wherever it is needed.
 
@@ -81,10 +82,10 @@ so the best results will usually come from combining them.
 ###Functional models
 In most applications the business model contains a mixture of data about things 
 that exist or have happened in the outside world, and data that is calculated from that source data.
-A functional model has an **unopinonated data model** with pure source data (just the facts), with functions
+A functional model has an **unopinionated data model** with pure source data (just the facts), with functions
 to calculate everything else.
 
-In the simplistic bank account model often used in coding examples, the Account object would have just
+In the simplistic bank account model often used in coding examples, the Account object would have
 things like the account number and holder's name, but *not* the balance.  The deposits and withdrawals
 are also held as primary source data, and there is a function to calculate the balance from these when it is needed.
 
@@ -144,7 +145,7 @@ of metadata-driven code with full control.
 
 
 ###Serverless
-The application is written to run primarily in the browser.  Some applications may not any server component, for example 
+The application is written to run primarily in the browser.  Some applications may not have any server component, for example 
 if each user has their own separate data and validation in the browser application is sufficient.  In other cases it may be necessary to have a server function
 to validate changes from a user before they are copied to a shared central store, or to filter the data
 being sent out to each user if fine-grained permissions are needed.  Server functions may also be needed for things
