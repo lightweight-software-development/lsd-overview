@@ -17,6 +17,8 @@ It does this by
 
 LSD combines an approach to development with actual implementations of tools and components that support it
 
+The components and an example application can be found in the [Lightweight Software Development](https://github.com/lightweight-software-development) organisation on GitHub.
+
 ##The Problems
 ###The implementation gap
 The code for a system is usually much larger than a plain language description of the business requirement.
